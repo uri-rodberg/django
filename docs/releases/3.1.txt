@@ -111,7 +111,9 @@ instances of the same project to Django 3.1, you should set
 :setting:`DEFAULT_HASHING_ALGORITHM` to ``'sha1'`` during the transition, in
 order to allow compatibility with the older versions of Django. Once the
 transition to 3.1 is complete you can stop overriding
-:setting:`DEFAULT_HASHING_ALGORITHM`.
+:setting:`DEFAULT_HASHING_ALGORITHM`. We also recommend doing this with
+Django version >= 3.1.1, since sessions backward compatibility is not fully
+supported in Django 3.1 (:ticket:`31864`).
 
 This setting is deprecated as of this release, because support for tokens,
 cookies, sessions, and signatures that use SHA-1 algorithm will be removed in
